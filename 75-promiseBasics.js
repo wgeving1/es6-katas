@@ -4,12 +4,12 @@
 
 describe('a Promise represents an operation that hasn`t completed yet, but is expected in the future', function() {
   it('`Promise` is a global function', function() {
-    const expectedType = typeof Promise;
+    const expectedType = 'function';
     assert.equal(typeof Promise, expectedType);
   });
   describe('the constructor', function() {
     it('instantiating it without params throws', function() {
-      const fn = () => { Promise() }
+      const fn = (params) => { Promise(params) };
       assert.throws(fn);
     });  
     it('expects a function as parameter', function() {
